@@ -1,0 +1,8 @@
+## Download Broadcom Images for VKS
+
+imgpkg-windows-amd64.exe copy --bundle projects.packages.broadcom.com/vsphere/supervisor/vks-standard-packages/3.6.0-20260416/vks-standard-packages:3.6.0-20260416 --to-tar C:\Users\xxxx\xxxx\img\vks-standard-packages.tar --cosign-signatures
+
+## Import Broadcom Images for VKS
+
+imgpkg-windows-amd64.exe copy --tar C:\Users\xxxx\xxxx\img\vks-standard-packages.tar --to-repo harborova.lab.local/tkg/packages --registry-ca-cert-path C:\Users\xxxx\xxxx\xxxx\harbor.crt --registry-username admin --registry-password blablabla
+
