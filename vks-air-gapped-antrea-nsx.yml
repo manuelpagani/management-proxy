@@ -1,0 +1,15 @@
+apiVersion: cni.tanzu.vmware.com/v1alpha1
+kind: AntreaConfig
+metadata:
+  name: vks-cluster-antrea-package
+  namespace: vks-air-gapped
+spec:
+  antrea:
+    config:
+      featureGates:
+        AntreaPolicy: true
+        AntreaTraceflow: true
+        NetworkPolicyStats: true
+        NodePortLocal: true
+  antreaNSX:
+    enable: true
